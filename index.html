@@ -46,7 +46,7 @@
         <img src="assets/img/about.png" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Muhammed Shabeer</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="http://www.twitter.com" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://twitter.com/shabeerkdm" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="http://www.facebook.com" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
           <a href="http://www.instagram.com" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
           <a href="http://www.skype.com" target="_blank" class="google-plus"><i class="bx bxl-skype"></i></a>
@@ -621,13 +621,13 @@
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
                   <input type="text" name="name" class="form-control" id="name"
-                    onkeydown="return /[a-z]/i.test(event.key)" onkeyup="nameChek()" />
+                    onkeydown="return /[a-z]/i.test(event.key)" onkeyup="nameChek()" onblur="nameChek()"/>
                   <p id="name-alert" style="color:red;"></p>
                   <div class="validate"></div>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Your Email</label>
-                  <input type="text" class="form-control" name="email" id="email" onkeyup="checkEmail()" />
+                  <input type="text" class="form-control" name="email" id="email" onkeyup="checkEmail()" onblur="checkEmail()"/>
                   <p id="email-alert" style="color:red;"></p>
                   <div class="validate"></div>
                 </div>
@@ -635,14 +635,14 @@
               <div class="form-group">
                 <label for="name">Mobile</label>
                 <input type="text" class="form-control" name="mobile" id="mobile"
-                  oninput="this.value = this.value.replace(/\D/g,'');" onkeyup="checkNumber()" />
+                  oninput="this.value = this.value.replace(/\D/g,'');" onkeyup="checkNumber()" onblur="checkNumber()"/>
                 <p id="mobile-alert" style="color:red;"></p>
                 <div class="validate"></div>
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
                 <textarea class="form-control" name="message" id="message" rows="10"
-                  onkeyup="checkMessage()"></textarea>
+                  onkeyup="checkMessage()" onblur="checkMessage()"></textarea>
                 <p id="message-alert" style="color:red;"></p>
                 <div class="validate"></div>
               </div>
