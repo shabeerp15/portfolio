@@ -78,16 +78,10 @@ function allCheck(){
         return true;
     }
     else{
-        if(validated.name==false){
+        if(validated.name==false || validated.email==false || validated.phone==false || validated.messge==false){
             nameChek();
-        }
-        else if(validated.email==false){
             checkEmail();
-        }
-        else if(validated.phone==false){
             checkNumber();
-        }
-        else{
             checkMessage();
         }
         return false;
