@@ -20,7 +20,7 @@ function nameChek() {
 }
 
 function checkEmail() {
-    var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var emailCheck = document.getElementById('email').value;
     var emailAlert = document.getElementById('email-alert');
     if (emailCheck == "" || emailCheck == null) {
