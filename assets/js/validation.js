@@ -78,7 +78,7 @@ function allCheck(){
         return true;
     }
     else{
-        if(validated.name==false || validated.email==false || validated.phone==false || validated.messge==false){
+        if(validated.name==false || validated.email==false || validated.mobile==false || validated.messge==false){
             nameChek();
             checkEmail();
             checkNumber();
