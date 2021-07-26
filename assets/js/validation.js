@@ -1,22 +1,30 @@
-const validated ={
-    name:false,
-    email:false,
-    mobile:false,
-    message:false
+const validated = {
+    name: false,
+    email: false,
+    mobile: false,
+    message: false
 }
+
 
 function nameChek() {
     var nameAlert = document.getElementById('name-alert');
     var name = document.getElementById("name").value;
+    var namePattern = /^[a-zA-Z]+ +[a-zA-Z]*$/;
+    var expression2 = /^[a-zA-Z]*$/;
 
-    if (name == "" || name==null) {
+    if (name == "" || name == null) {
         validated.name = false;
         nameAlert.innerHTML = "Required"
-    }
-    else{
-        nameAlert.innerHTML = ""
+
+    } else if (name.match(namePattern) || name.match(expression2)) {
+        nameAlert.innerHTML = "";
         validated.name = true;
     }
+    else {
+        nameAlert.innerHTML = " Enter Charecters only";
+        validated.name = false;
+    }
+
 }
 
 function checkEmail() {
@@ -42,15 +50,15 @@ function checkNumber() {
         validated.mobile = false;
         mobileAlert.innerHTML = "Required";
     }
-    else if(mobileNumber.length ==10 ){
+    else if (mobileNumber.length == 10) {
         mobileAlert.innerHTML = "";
-        validated.mobile = true; 
-    }else if(mobileNumber.length <10 ){
-            mobileAlert.innerHTML = "Enter Minimum 10 Number";
-            validated.mobile = false;
-    }else if(mobileNumber.length > 10){
-            mobileAlert.innerHTML = "Entered out of 10 Numbers";
-            validated.mobile = false;
+        validated.mobile = true;
+    } else if (mobileNumber.length < 10) {
+        mobileAlert.innerHTML = "Enter Minimum 10 Number";
+        validated.mobile = false;
+    } else if (mobileNumber.length > 10) {
+        mobileAlert.innerHTML = "Entered out of 10 Numbers";
+        validated.mobile = false;
     }
     else {
         validated.mobile = true;
@@ -73,12 +81,12 @@ function checkMessage() {
     }
 }
 
-function allCheck(){
-    if(validated.name&&validated.email&&validated.mobile&&validated.message){
+function allCheck() {
+    if (validated.name && validated.email && validated.mobile && validated.message) {
         return true;
     }
-    else{
-        if(validated.name==false || validated.email==false || validated.mobile==false || validated.messge==false){
+    else {
+        if (validated.name == false || validated.email == false || validated.mobile == false || validated.messge == false) {
             nameChek();
             checkEmail();
             checkNumber();

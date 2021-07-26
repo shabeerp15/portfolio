@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon (2).png" rel="icon"> 
+  <link href="assets/img/favicon (2).png" rel="icon">
 
   <!-- Google Fonts -->
   <link
@@ -49,7 +49,7 @@
           <a href="https://twitter.com/shabeerkdm" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="http://www.facebook.com" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
           <a href="http://www.instagram.com" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="http://www.skype.com" target="_blank" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <!-- <a href="http://www.skype.com" target="_blank" class="google-plus"><i class="bx bxl-skype"></i></a> -->
           <a href="https://www.linkedin.com/in/muhammed-shabeer-34099a217/" target="_blank" class="linkedin"><i
               class="bx bxl-linkedin"></i></a>
         </div>
@@ -75,7 +75,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>It's Me, Shabeer</h1>
-      <p>I'm <span class="typed"  data-typed-items="Designer, Developer, Programmer, Freelancer, Artist"></span></p>
+      <p>I'm <span class="typed" data-typed-items="Designer, Developer, Programmer, Freelancer, Artist"></span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -283,17 +283,18 @@
 
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
-              <h4>SSLC</h4>
-              <h5>2010 - 2011</h5>
-              <p><em>PHSS Pandallur, Malappuram</em></p>
-              <p>I am completed my high school at 2010 in Pandallur Higher Secondary School</p>
-            </div>
-            <div class="resume-item">
               <h4>PLUS TWO</h4>
               <h5>2012 - 2013</h5>
               <p><em>Govt HSS Pandikkad, Malappuram</em></p>
               <p>I am completed my Higher secondary Graduation at 2012 in Govt higher Secondary School Pandikkad</p>
             </div>
+            <div class="resume-item">
+              <h4>SSLC</h4>
+              <h5>2010 - 2011</h5>
+              <p><em>PHSS Pandallur, Malappuram</em></p>
+              <p>I am completed my high school at 2010 in Pandallur Higher Secondary School</p>
+            </div>
+
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Professional Experience</h3>
@@ -310,7 +311,7 @@
               </ul>
             </div>
             <div class="resume-item">
-              <h4>Web Developing</h4>
+              <h4>Web Developent</h4>
               <h5>2021 - Present</h5>
               <p><em>Self Learning</em></p>
               <ul>
@@ -348,7 +349,7 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-1.png" class="img-fluid" alt="">
               <div class="portfolio-links">
@@ -368,7 +369,7 @@
                 <a href="#" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
@@ -601,13 +602,13 @@
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4>Email:</h4>
-                <p>shabeerp15@gmail.com</p>
+                <p><a href="mailto:shabeerp15@gmail.com?subject = Feedback&body = Message">shabeerp15@gmail.com</a></p>
               </div>
 
               <div class="phone">
                 <i class="icofont-phone"></i>
                 <h4>Call:</h4>
-                <p>+91 99 95 885 021</p>
+                <p> <a href="tel:+919995885021">+91 99 95 885 021</a> </p>
               </div>
 
               <iframe
@@ -622,14 +623,15 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name"
-                    onkeydown="return /[a-z]/i.test(event.key)" onkeyup="nameChek()" onblur="nameChek()" />
+                  <input type="text" name="name" class="form-control" id="name" onkeyup="nameChek()"
+                    onblur="nameChek()" />
                   <p id="name-alert" style="color:red;"></p>
                   <div class="validate"></div>
                 </div>
+                <!-- onkeydown="return /[a-z]/i.test(event.key)" -->
                 <div class="form-group col-md-6">
                   <label for="name">Your Email</label>
-                  <input type="text" class="form-control" name="email" id="email" onkeyup="checkEmail()"
+                  <input type="text" class="form-control" name="email" id="email" onkeyup="checkEmail()" min="3"
                     onblur="checkEmail()" />
                   <p id="email-alert" style="color:red;"></p>
                   <div class="validate"></div>
@@ -638,7 +640,8 @@
               <div class="form-group">
                 <label for="name">Mobile</label>
                 <input type="text" class="form-control" name="mobile" id="mobile"
-                  oninput="this.value = this.value.replace(/\D/g,'');" onkeyup="checkNumber()" onblur="checkNumber()" />
+                  oninput="this.value = this.value.replace(/\D/g,'');" onkeyup="checkNumber()" onblur="checkNumber()"
+                  maxlength="10" />
                 <p id="mobile-alert" style="color:red;"></p>
                 <div class="validate"></div>
               </div>
@@ -672,7 +675,7 @@
         &copy; Copyright <strong><span>@2021</span></strong>
       </div>
       <div class="credits">
-        Designed by <a href="#">shabeer</a>
+        Designed by <a href="#contact">shabeer</a>
       </div>
     </div>
   </footer><!-- End  Footer -->
@@ -687,7 +690,7 @@
   <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
   <script src="assets/vendor/counterup/counterup.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script> 
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
