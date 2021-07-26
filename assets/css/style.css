@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 15px auto;
   display: block;
   width: 120px;
-  /* border: 8px solid #2c2f3f; */
+  border: 8px solid #2c2f3f;
 }
 
 #header .profile h1 {
@@ -224,7 +224,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+/*   z-index: 1; */
 }
 
 #hero .hero-container {
